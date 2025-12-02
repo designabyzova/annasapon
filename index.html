@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Sapon | Ателье индивидуального пошива в Москве</title>
+    <meta name="description" content="Вечерние и свадебные платья от дизайнера Анны Сапон. Индивидуальный пошив, уникальный дизайн, безупречный крой. Запишитесь на консультацию.">
+
+    <!-- Fonts - Luxury Ultra-thin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="Logo_Sapon_Anna_main.jpg" alt="Anna Sapon" class="header__logo-img">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="#collections">Коллекции</a></li>
+                    <li><a href="#atelier">Ателье</a></li>
+                    <li><a href="#about">О дизайнере</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="header__cta btn btn--primary">Записаться</a>
+            <button class="header__burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu__nav">
+            <ul>
+                <li><a href="#collections">Коллекции</a></li>
+                <li><a href="#atelier">Ателье</a></li>
+                <li><a href="#about">О дизайнере</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <a href="#contact" class="btn btn--primary">Записаться на консультацию</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__background">
+            <img src="Fashion_models_Sapon_Anna/Fashion_model_6-1.jpg" alt="Anna Sapon Collection">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__brand">Anna Sapon</span>
+            <h1 class="hero__title">Искусство индивидуального<br>пошива в Москве</h1>
+            <p class="hero__description">Вечерние и свадебные платья, созданные для вас</p>
+            <a href="#contact" class="btn btn--primary btn--large">Записаться на консультацию</a>
+        </div>
+        <a href="#process" class="hero__scroll">
+            <span>Листайте</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <span class="section-label">Наш подход</span>
+            <h2 class="section-title">Путь к идеальному платью</h2>
+            <div class="process__grid">
+                <div class="process__item">
+                    <span class="process__number">01</span>
+                    <h3 class="process__title">Консультация</h3>
+                    <p class="process__text">Знакомство, обсуждение образа и ваших пожеланий</p>
+                </div>
+                <div class="process__item">
+                    <span class="process__number">02</span>
+                    <h3 class="process__title">Эскиз</h3>
+                    <p class="process__text">Разработка уникального дизайна специально для вас</p>
+                </div>
+                <div class="process__item">
+                    <span class="process__number">03</span>
+                    <h3 class="process__title">Пошив</h3>
+                    <p class="process__text">Работа с лучшими тканями и внимание к деталям</p>
+                </div>
+                <div class="process__item">
+                    <span class="process__number">04</span>
+                    <h3 class="process__title">Примерка</h3>
+                    <p class="process__text">Финальная подгонка для безупречной посадки</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <span class="section-label">Наши работы</span>
+            <h2 class="section-title">Коллекции</h2>
+            <div class="collections__grid">
+                <a href="#gallery" class="collections__card">
+                    <div class="collections__image">
+                        <img src="Fashion_models_Sapon_Anna/Fashion_model_5-1.jpg" alt="Вечерние платья">
+                    </div>
+                    <div class="collections__overlay">
+                        <span class="collections__label">Коллекция</span>
+                        <h3 class="collections__title">Вечерние платья</h3>
+                        <span class="collections__link">Смотреть <span>&rarr;</span></span>
+                    </div>
+                </a>
+                <a href="#gallery" class="collections__card">
+                    <div class="collections__image">
+                        <img src="Wedding_dress_Sapon_Anna/Wedding_dress_Sapon_Anna_1-1.jpg" alt="Свадебные платья">
+                    </div>
+                    <div class="collections__overlay">
+                        <span class="collections__label">Коллекция</span>
+                        <h3 class="collections__title">Свадебные платья</h3>
+                        <span class="collections__link">Смотреть <span>&rarr;</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__image clickable-image">
+            <img src="Hero_Anna_Sapon_portrait.jpg" alt="Анна Сапон - дизайнер">
+        </div>
+        <div class="about__content">
+            <span class="section-label">О дизайнере</span>
+            <h2 class="about__title">Анна Сапон</h2>
+            <p class="about__subtitle">Дизайнер, основатель ателье</p>
+            <div class="about__divider"></div>
+            <p class="about__text">
+                Более 15 лет я создаю платья, которые подчёркивают индивидуальность каждой женщины. Каждый силуэт — это история, рассказанная через ткань, крой и детали.
+            </p>
+            <p class="about__text">
+                Мой подход — это внимание к каждой детали, понимание женской фигуры и стремление создать не просто платье, а произведение искусства.
+            </p>
+            <a href="#contact" class="btn btn--secondary">Связаться со мной</a>
+        </div>
+    </section>
+
+    <!-- Atelier Section - Sketch to Reality -->
+    <section class="atelier" id="atelier">
+        <div class="container">
+            <span class="section-label">Процесс</span>
+            <h2 class="section-title">От идеи к образу</h2>
+            <p class="section-subtitle">Каждое платье начинается с эскиза</p>
+            <div class="atelier__showcase">
+                <div class="atelier__row">
+                    <div class="atelier__pair">
+                        <div class="atelier__sketch clickable-image">
+                            <img src="Sapon_idea_design_ready_model/Design2_process2_1sketch.jpg" alt="Эскиз платья">
+                            <span class="atelier__caption">Эскиз</span>
+                        </div>
+                        <div class="atelier__arrow">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="atelier__result clickable-image">
+                            <img src="Sapon_idea_design_ready_model/Design2_process2_model_view1.jpg" alt="Готовое платье">
+                            <span class="atelier__caption">Результат</span>
+                        </div>
+                    </div>
+                    <div class="atelier__pair">
+                        <div class="atelier__sketch clickable-image">
+                            <img src="Sapon_idea_design_ready_model/Design7_sketch.jpg" alt="Эскиз платья">
+                            <span class="atelier__caption">Эскиз</span>
+                        </div>
+                        <div class="atelier__arrow">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="atelier__result clickable-image">
+                            <img src="Sapon_idea_design_ready_model/Design7_real_model.jpg" alt="Готовое платье">
+                            <span class="atelier__caption">Результат</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="atelier__sketches clickable-image">
+                    <img src="Sapon_sketches_fashion_design_process/Sapon_process_sketches_3_items.jpg" alt="Коллекция эскизов">
+                    <span class="atelier__caption-large">Коллекция эскизов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fashion Show Section -->
+    <section class="fashion-show" id="fashionShow">
+        <div class="container">
+            <span class="section-label section-label--light">Показы</span>
+            <h2 class="section-title section-title--light">На подиуме</h2>
+            <div class="fashion-show__grid">
+                <div class="fashion-show__item fashion-show__item--large clickable-image">
+                    <img src="FashionShow/Sapon_collection_model1_on_Fashion_show.jpeg" alt="Anna Sapon Fashion Show">
+                </div>
+                <div class="fashion-show__item clickable-image">
+                    <img src="FashionShow/Sapon_collection_model2_on_Fashion_show.jpeg" alt="Anna Sapon Fashion Show">
+                </div>
+                <div class="fashion-show__item clickable-image">
+                    <img src="FashionShow/Sapon_collection_model3_on_Fashion_show.jpeg" alt="Anna Sapon Fashion Show">
+                </div>
+                <div class="fashion-show__item clickable-image">
+                    <img src="FashionShow/Sapon_collection_model4_on_Fashion_show.jpeg" alt="Anna Sapon Fashion Show">
+                </div>
+                <div class="fashion-show__item clickable-image">
+                    <img src="FashionShow/Sapon_collection_model5_on_Fashion_show.jpeg" alt="Anna Sapon Fashion Show">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <span class="section-label">Портфолио</span>
+            <h2 class="section-title">Галерея работ</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_1-2.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_2-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_3-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_4-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_5-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_6-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_7-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Wedding_dress_Sapon_Anna/Wedding_dress_Sapon_Anna_1-2.jpg" alt="Anna Sapon Wedding"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_8-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Fashion_models_Sapon_Anna/Fashion_model_9-1.jpg" alt="Anna Sapon Collection"></div>
+                <div class="gallery__item clickable-image"><img src="Wedding_dress_Sapon_Anna/Wedding_dress_Sapon_Anna_2-1.jpg" alt="Anna Sapon Wedding"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <span class="section-label">Отзывы</span>
+            <h2 class="section-title">Истории клиентов</h2>
+            <div class="testimonials__grid">
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">&ldquo;</div>
+                    <p class="testimonials__text">Анна создала платье моей мечты. Каждая деталь продумана до совершенства. Я чувствовала себя королевой в свой особенный день.</p>
+                    <div class="testimonials__author">
+                        <span class="testimonials__name">Елена М.</span>
+                        <span class="testimonials__role">Свадебное платье</span>
+                    </div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">&ldquo;</div>
+                    <p class="testimonials__text">Профессионализм высочайшего уровня. Платье село идеально, учтены все пожелания. Рекомендую всем, кто ценит качество.</p>
+                    <div class="testimonials__author">
+                        <span class="testimonials__name">Мария К.</span>
+                        <span class="testimonials__role">Вечернее платье</span>
+                    </div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__quote">&ldquo;</div>
+                    <p class="testimonials__text">Это был незабываемый опыт — от первой консультации до финальной примерки. Анна понимает женщин как никто другой.</p>
+                    <div class="testimonials__author">
+                        <span class="testimonials__name">Анастасия В.</span>
+                        <span class="testimonials__role">Вечернее платье</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact__form-wrapper">
+            <span class="section-label">Связаться</span>
+            <h2 class="section-title section-title--left">Запишитесь на консультацию</h2>
+            <form class="contact__form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Интересует</label>
+                    <select id="interest" name="interest">
+                        <option value="">Выберите категорию</option>
+                        <option value="evening">Вечернее платье</option>
+                        <option value="wedding">Свадебное платье</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Расскажите о вашем видении идеального платья"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+            </form>
+        </div>
+        <div class="contact__info">
+            <div class="contact__info-inner">
+                <h3 class="contact__info-title">Ателье<br>Anna Sapon</h3>
+                <div class="contact__info-items">
+                    <div class="contact__info-item">
+                        <span class="contact__info-label">Адрес</span>
+                        <p>Москва, ул. Пречистенка, 10</p>
+                    </div>
+                    <div class="contact__info-item">
+                        <span class="contact__info-label">Телефон</span>
+                        <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    </div>
+                    <div class="contact__info-item">
+                        <span class="contact__info-label">Часы работы</span>
+                        <p>Пн–Сб: 10:00–20:00<br>По предварительной записи</p>
+                    </div>
+                </div>
+                <div class="contact__social">
+                    <a href="#" class="contact__social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact__social-link" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 5L10 13M21 5L14 21L10 13M21 5L3 11L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact__social-link" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 21L4.5 15.5C3.5 13.5 3.5 11 4.5 9C6.5 5 11 3 15.5 4.5C19 6 21 9.5 21 13C21 17.5 17.5 21 13 21C11 21 9 20.5 7.5 19.5L3 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="#" class="footer__logo">
+                    <img src="Logo_Sapon_Anna_main.jpg" alt="Anna Sapon" class="footer__logo-img">
+                </a>
+                <nav class="footer__nav">
+                    <a href="#collections">Коллекции</a>
+                    <a href="#atelier">Ателье</a>
+                    <a href="#about">О дизайнере</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Anna Sapon. Все права защищены.</p>
+                <div class="footer__social">
+                    <a href="#">Instagram</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Закрыть">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M8 8L24 24M8 24L24 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <img src="" alt="" class="lightbox__image">
+        <button class="lightbox__prev" aria-label="Предыдущее">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M30 36L18 24L30 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="lightbox__next" aria-label="Следующее">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M18 36L30 24L18 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="lightbox__counter">
+            <span id="lightboxCurrent">1</span> / <span id="lightboxTotal">1</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
