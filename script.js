@@ -361,6 +361,9 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
+    // API endpoint - update this to your deployed backend URL
+    const API_URL = 'http://localhost:3000/api/contact';
+
     // Phone mask
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
@@ -391,33 +394,99 @@ function initContactForm() {
         });
     }
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
 
-        // Simulate form submission
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
+        // Disable button and show loading state
         submitBtn.textContent = 'Отправка...';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
-            submitBtn.textContent = 'Заявка отправлена!';
-            submitBtn.style.backgroundColor = '#4CAF50';
+        try {
+            // Send form data to backend
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
 
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                // Success state
+                submitBtn.textContent = '✓ Заявка отправлена!';
+                submitBtn.style.backgroundColor = '#4CAF50';
+
+                // Show success message
+                showNotification('Спасибо! Мы свяжемся с вами в ближайшее время.', 'success');
+
+                // Reset form after 2 seconds
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.disabled = false;
+                }, 2000);
+            } else {
+                // Error from backend
+                throw new Error(result.error || 'Ошибка при отправке заявки');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+
+            // Error state
+            submitBtn.textContent = '✗ Ошибка отправки';
+            submitBtn.style.backgroundColor = '#e74c3c';
+
+            // Show error message
+            showNotification(
+                error.message || 'Произошла ошибка. Пожалуйста, позвоните нам напрямую: +7 (985) 416-50-11',
+                'error'
+            );
+
+            // Reset button after 3 seconds
             setTimeout(() => {
-                form.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.style.backgroundColor = '';
                 submitBtn.disabled = false;
-            }, 2000);
-        }, 1000);
-
-        console.log('Form submitted:', data);
+            }, 3000);
+        }
     });
+}
+
+/**
+ * Show notification message
+ */
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.form-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `form-notification form-notification--${type}`;
+    notification.textContent = message;
+
+    // Add to form
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.insertAdjacentElement('afterend', notification);
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => notification.remove(), 300);
+        }, 5000);
+    }
 }
 
 /**
