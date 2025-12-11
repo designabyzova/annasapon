@@ -219,8 +219,8 @@ app.post('/api/contact', async (req, res) => {
             });
         }
 
-        // Validate phone format
-        const phoneRegex = /[\+]?[0-9\s\-\(\)]{7,20}/;
+        // Validate phone format (international format allowed)
+        const phoneRegex = /[\+]?[0-9\s\-\(\)]{7,25}/;
         if (!phoneRegex.test(phone)) {
             return res.status(400).json({
                 success: false,

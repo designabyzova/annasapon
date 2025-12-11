@@ -364,32 +364,20 @@ function initContactForm() {
     // API endpoint - update this to your deployed backend URL
     const API_URL = 'http://localhost:3000/api/contact';
 
-    // Phone mask
+    // No phone formatting - accept any international format
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
-        phoneInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, '');
+        // Remove any existing event listeners by cloning
+        const newPhoneInput = phoneInput.cloneNode(true);
+        phoneInput.parentNode.replaceChild(newPhoneInput, phoneInput);
 
-            if (value.length > 0) {
-                if (value[0] === '7' || value[0] === '8') {
-                    value = value.substring(1);
-                }
-
-                let formatted = '+7 ';
-                if (value.length > 0) {
-                    formatted += '(' + value.substring(0, 3);
-                }
-                if (value.length > 3) {
-                    formatted += ') ' + value.substring(3, 6);
-                }
-                if (value.length > 6) {
-                    formatted += '-' + value.substring(6, 8);
-                }
-                if (value.length > 8) {
-                    formatted += '-' + value.substring(8, 10);
-                }
-
-                e.target.value = formatted;
+        // Simple validation - just remove letters
+        newPhoneInput.addEventListener('input', (e) => {
+            // Only remove letters, allow all numbers and symbols
+            const value = e.target.value;
+            const cleaned = value.replace(/[a-zA-Zа-яА-ЯёЁ]/g, '');
+            if (value !== cleaned) {
+                e.target.value = cleaned;
             }
         });
     }
