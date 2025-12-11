@@ -361,8 +361,8 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    // API endpoint - update this to your deployed backend URL
-    const API_URL = 'http://localhost:3000/api/contact';
+    // API endpoint - Cloudflare Workers deployed URL
+    const API_URL = 'https://anna-sapon-contact-api.anton-abyzov.workers.dev/api/contact';
 
     // No phone formatting - accept any international format
     const phoneInput = document.getElementById('phone');

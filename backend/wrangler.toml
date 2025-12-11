@@ -1,0 +1,13 @@
+name = "anna-sapon-contact-api"
+main = "worker.js"
+compatibility_date = "2024-12-11"
+account_id = "1364b528762500de4f870e064229d443"
+
+[vars]
+FROM_EMAIL = "noreply@easychamp.com"
+FROM_NAME = "Anna Sapon Website"
+TO_EMAIL = "designabyzova@gmail.com"
+
+# Environment variables (secrets) - will be set via command line
+# AHASEND_API_KEY
+# AHASEND_ACCOUNT_ID
