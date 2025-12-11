@@ -18,7 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Ahasend API configuration
 const AHASEND_API_KEY = process.env.AHASEND_API_KEY;
-const AHASEND_API_URL = 'https://api.ahasend.com/v1/email/send';
+const AHASEND_ACCOUNT_ID = process.env.AHASEND_ACCOUNT_ID || 'default';  // Will get from API if needed
+const AHASEND_API_URL = `https://api.ahasend.com/v2/accounts/${AHASEND_ACCOUNT_ID}/messages`;
 const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@easychamp.com';
 const FROM_NAME = process.env.FROM_NAME || 'Anna Sapon Website';
 const TO_EMAIL = 'designabyzova@gmail.com';
@@ -235,31 +236,28 @@ app.post('/api/contact', async (req, res) => {
             message: message || ''
         };
 
-        // Send email via Ahasend API
+        // Send email via Ahasend API v2
         const ahasendResponse = await axios.post(
             AHASEND_API_URL,
             {
                 from: {
-                    email: FROM_EMAIL,
-                    name: FROM_NAME
+                    name: FROM_NAME,
+                    email: FROM_EMAIL
                 },
-                to: [
+                recipients: [
                     {
-                        email: TO_EMAIL,
-                        name: 'Anna Sapon'
+                        name: 'Anna Sapon',
+                        email: TO_EMAIL
                     }
                 ],
                 subject: `Новая заявка на консультацию от ${name}`,
-                html: generateEmailHTML(emailData),
-                text: generateEmailText(emailData),
-                headers: {
-                    'Reply-To': phone.includes('@') ? phone : undefined
-                }
+                html_content: generateEmailHTML(emailData),
+                text_content: generateEmailText(emailData)
             },
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-Api-Key': AHASEND_API_KEY
+                    'Authorization': `Bearer ${AHASEND_API_KEY}`
                 }
             }
         );
