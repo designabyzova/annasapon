@@ -248,6 +248,10 @@ app.post('/api/contact', async (req, res) => {
                     {
                         name: 'Anna Sapon',
                         email: TO_EMAIL
+                    },
+                    {
+                        name: 'Anna Sapon',
+                        email: 'annsapon@yandex.ru'
                     }
                 ],
                 subject: `Новая заявка на консультацию от ${name}`,

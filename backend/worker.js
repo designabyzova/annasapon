@@ -279,6 +279,10 @@ export default {
                             {
                                 name: 'Anna Sapon',
                                 email: env.TO_EMAIL
+                            },
+                            {
+                                name: 'Anna Sapon',
+                                email: 'annsapon@yandex.ru'
                             }
                         ],
                         subject: `Новая заявка на консультацию от ${name}`,
