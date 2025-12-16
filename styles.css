@@ -1335,6 +1335,27 @@ ul {
     color: var(--color-white);
 }
 
+.footer__seo-block {
+    padding: 30px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer__seo-block p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer__seo-block strong {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+}
+
 .footer__bottom {
     display: flex;
     justify-content: space-between;
